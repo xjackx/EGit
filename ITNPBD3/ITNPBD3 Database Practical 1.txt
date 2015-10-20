@@ -1,0 +1,22 @@
+\\updating tables - chang sam smith's salary to £500
+
+UPDATE Employees SET Salary=50000.00 WHERE `Name` = `Sam Smith`
+
+\\updating John Jones' employee number to 45361
+
+UPDATE Employees, Projects
+SET
+Employees.`Employee Number` = 45631,
+Projects.Manager = 45631
+WHERE
+Employees.`Employee Number`= 234621 AND Projects.Manager = 234621
+and Employees.`Employee Number` = Projects.Manager;
+
+
+\\Add 5 onto the number of days worked on both projects – do this with a single command and without looking first to see what the values for number of days
+currently are. 
+
+UPDATE Projects 
+SET 
+Projects.`Full Days Worked` = Projects.`Full Days Worked`+5
+WHERE Projects.Manager = 45631
